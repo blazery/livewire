@@ -18,6 +18,7 @@ class UnitTest extends \LegacyTests\Unit\TestCase
         $this->app->forgetInstances();
         $this->app->forgetScopedInstances();
         Facade::clearResolvedInstances();
+
         // Need to rebind these for the testcase cleanup to work.
         $this->app->instance('app', $this->app);
         $this->app->instance('config', $config);
